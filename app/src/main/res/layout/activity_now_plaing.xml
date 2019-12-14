@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
     tools:context=".NowPlayingActivity">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/page_title_padding"
-        android:text="@string/now_playing_title"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/page_title_text_size"
-        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -64,40 +54,40 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="@dimen/secondary_btns_size"
             android:layout_height="@dimen/secondary_btns_size"
-            app:fabCustomSize="@dimen/secondary_btns_size"
             android:layout_margin="16dp"
             android:background="@color/colorAccent"
             android:clickable="true"
             android:contentDescription="@string/previous_btn"
             android:focusable="true"
-            android:src="@drawable/ic_skip_previous" />
+            android:src="@drawable/ic_skip_previous"
+            app:fabCustomSize="@dimen/secondary_btns_size" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="@dimen/play_btn_size"
             android:layout_height="@dimen/play_btn_size"
-            app:fabCustomSize="@dimen/play_btn_size"
             android:layout_margin="16dp"
             android:background="@color/colorAccent"
             android:clickable="true"
             android:contentDescription="@string/play_btn"
             android:focusable="true"
-            android:src="@drawable/ic_play_arrow" />
+            android:src="@drawable/ic_play_arrow"
+            app:fabCustomSize="@dimen/play_btn_size" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="@dimen/secondary_btns_size"
-            app:fabCustomSize="@dimen/secondary_btns_size"
             android:layout_height="@dimen/secondary_btns_size"
             android:layout_margin="16dp"
             android:background="@color/colorAccent"
             android:clickable="true"
             android:contentDescription="@string/next_btn"
             android:focusable="true"
-            android:src="@drawable/ic_skip_next" />
+            android:src="@drawable/ic_skip_next"
+            app:fabCustomSize="@dimen/secondary_btns_size" />
 
     </LinearLayout>
 
     <SeekBar
         android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+        android:layout_height="40dp" />
 
 </LinearLayout>

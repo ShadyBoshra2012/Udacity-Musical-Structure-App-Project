@@ -1,9 +1,12 @@
 package com.shadyboshra2012.android.udacitymusicalstructureappproject;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -15,8 +18,11 @@ public class NowPlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_now_plaing);
 
-        // Initialize new ArrayList for songs.
-        ArrayList<Song> songs = new ArrayList<>();
+        // Back button
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
+
         // Array of Songs' names.
         String[] songsName = new String[]{"LoveGame", "Time What Is Time", "Halo", "I Miss You", "Let It Be",
                 "Where Are You", "Sirens Call", "Fallin", "Black Velvet", "Believer"};
@@ -36,10 +42,11 @@ public class NowPlayingActivity extends AppCompatActivity {
             String artistName = songsArtists[id];
             String image = name.toLowerCase().replaceAll(" ", "_");
             Song song = new Song(id, name, artistName, image);
-            songs.add(song);
 
-            if (id == songID)
+            if (id == songID) {
                 selectedSong = song;
+                break;
+            }
         }
 
         // Initialize variables for changing image, song name and song artist name.
@@ -51,5 +58,10 @@ public class NowPlayingActivity extends AppCompatActivity {
         songNameTextView.setText(selectedSong.getName());
         TextView songArtistNameTextView = findViewById(R.id.song_artist_name_text);
         songArtistNameTextView.setText(selectedSong.getArtistName());
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
     }
 }
