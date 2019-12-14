@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".NowPlayingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/page_title_padding"
+        android:text="@string/now_playing_title"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/page_title_text_size"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/song_card_view_margin">
+
+        <ImageView
+            android:id="@+id/song_image_view"
+            android:layout_width="@dimen/song_image_view_card_size"
+            android:layout_height="@dimen/song_image_view_card_size"
+            android:layout_margin="@dimen/song_card_view_padding"
+            android:contentDescription="@string/song_image_view_content_description"
+            tools:src="@android:color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/song_name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/song_name_text_info_size"
+        android:textStyle="bold"
+        tools:text="Song Name" />
+
+    <TextView
+        android:id="@+id/song_artist_name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:padding="@dimen/song_linear_layout_padding"
+        android:textSize="@dimen/song_artist_name_text_size"
+        tools:text="Artist Name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="@dimen/secondary_btns_size"
+            android:layout_height="@dimen/secondary_btns_size"
+            app:fabCustomSize="@dimen/secondary_btns_size"
+            android:layout_margin="16dp"
+            android:background="@color/colorAccent"
+            android:clickable="true"
+            android:contentDescription="@string/previous_btn"
+            android:focusable="true"
+            android:src="@drawable/ic_skip_previous" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="@dimen/play_btn_size"
+            android:layout_height="@dimen/play_btn_size"
+            app:fabCustomSize="@dimen/play_btn_size"
+            android:layout_margin="16dp"
+            android:background="@color/colorAccent"
+            android:clickable="true"
+            android:contentDescription="@string/play_btn"
+            android:focusable="true"
+            android:src="@drawable/ic_play_arrow" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="@dimen/secondary_btns_size"
+            app:fabCustomSize="@dimen/secondary_btns_size"
+            android:layout_height="@dimen/secondary_btns_size"
+            android:layout_margin="16dp"
+            android:background="@color/colorAccent"
+            android:clickable="true"
+            android:contentDescription="@string/next_btn"
+            android:focusable="true"
+            android:src="@drawable/ic_skip_next" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+</LinearLayout>

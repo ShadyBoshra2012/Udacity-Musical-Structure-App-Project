@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="page_title_padding">12dp</dimen>
+    <dimen name="page_title_text_size">28sp</dimen>
+    <dimen name="song_card_margin">8dp</dimen>
+    <dimen name="song_image_view_size">100dp</dimen>
+    <dimen name="song_linear_layout_padding">8dp</dimen>
+    <dimen name="song_name_text_size">24sp</dimen>
+    <dimen name="song_artist_name_text_size">16sp</dimen>
+    <dimen name="song_card_view_padding">4dp</dimen>
+    <dimen name="song_card_view_margin">12dp</dimen>
+    <dimen name="song_image_view_card_size">200dp</dimen>
+    <dimen name="song_name_text_info_size">38sp</dimen>
+    <dimen name="play_btn_size">60dp</dimen>
+    <dimen name="secondary_btns_size">36dp</dimen>
+</resources>

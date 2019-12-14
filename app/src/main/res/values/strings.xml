@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Udacity Musical Structure App</string>
+    <string name="hall_of_music_title">Hall of Music</string>
+    <string name="song_image_view_content_description">Song Image View</string>
+    <string name="now_playing_title">Now Playing</string>
+    <string name="play_btn">Play</string>
+    <string name="next_btn">Next</string>
+    <string name="previous_btn">Previous</string>
+</resources>
